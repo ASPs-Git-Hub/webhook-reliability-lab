@@ -4,7 +4,7 @@
 
 **Version note: this repository is version 2 of Webhook Rescue Lab, published with a clean history. The earlier repository, `webhook-rescue-lab`, holds version 1 (14 tests, 5 planted defects, no real-data run).**
 
-Status: **BUILT_UNVERIFIED**: tests and planted-defect checks were run by me locally on 2026-11-03 (Node v26.0.0); remote CI has not yet run on the latest changes. This repository has just been created, so the first CI run is pending. No outside person has checked the results. The lab was reviewed by two independent AI reviewers (ChatGPT and Claude Fable) and corrected. Not reviewed by a human engineer. Raw output is in `evidence/` and `real-data/evidence/`.
+Status: **CI-PASSING**, independent evaluation pending. Last full remote CI run: commit `1035dbd`, [run 41602784963](https://github.com/ASPs-Git-Hub/webhook-reliability-lab/actions/runs/41602784963), Node 20 and 22: unit tests, the broken-handler demo script and the planted-defect check. I also ran everything locally on 2026-11-03. No outside person has checked the results. The lab was reviewed by two independent AI reviewers (ChatGPT and Claude Fable) and corrected. Not reviewed by a human engineer. Raw output is in `evidence/` and `real-data/evidence/`.
 
 ## Real-data results
 Full write-up, rules and raw output: [`real-data/README.md`](real-data/README.md). Real data: 1,941 real GitHub events from 6 public repositories, plus GitHub's and Stripe's published signature examples. How often events arrive twice, late or fail is my invention (written down before the run).
