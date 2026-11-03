@@ -1,0 +1,26 @@
+M01 KILLED   signature check removed entirely
+M02 KILLED   constant-time MAC compare removed
+M03 KILLED   replay window removed
+M04 KILLED   future timestamps accepted
+M05 KILLED   hex format check removed
+M06 KILLED   only the first v1 value is considered
+M07 KILLED   only the first secret is considered
+M08 KILLED   NaN clock no longer fails closed
+M09 KILLED   timestamp format check removed
+M10 KILLED   payload validation removed
+M11 KILLED   amount type check removed
+M12 KILLED   duplicate check removed
+M13 KILLED   concurrent-duplicate collapse removed
+M14 KILLED   concurrent duplicate always told 200
+M15 KILLED   stale-event guard removed
+M16 KILLED   same-second tie broken by arrival order
+M17 KILLED   retries reduced to one attempt
+M18 KILLED   failure list not recorded
+M19 KILLED   failure list records duplicates
+M20 KILLED   persistent failure acknowledged with 200
+M21 KILLED   maxAttempts validation removed
+M22 KILLED   security log for bad signatures removed
+M23 KILLED   dead-letter log removed
+M24 KILLED   backoff hook never called
+restored baseline passes: True
+24 of 24 mutations killed

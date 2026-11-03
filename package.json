@@ -1,0 +1,6 @@
+{
+  "name": "webhook-rescue-lab",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test test/*.test.js", "test:broken-raw": "node scripts/broken-raw.js" }
+}

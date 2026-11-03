@@ -1,0 +1,13 @@
+DEFECT REPRODUCED: forged signature (fresh timestamp) -> status 200, balance 100
+DEFECT REPRODUCED: wrong secret -> status 200
+DEFECT REPRODUCED: tampered body -> status 200, balance 999999
+DEFECT REPRODUCED: replay outside window -> status 200
+DEFECT REPRODUCED: duplicate delivery -> balance 200 (expected 100)
+DEFECT REPRODUCED: concurrent duplicates -> balance 300 (expected 100)
+DEFECT REPRODUCED: out-of-order overwrite -> final status active (expected canceled)
+DEFECT REPRODUCED: same-second arrival order -> order 1 -> canceled, order 2 -> active
+DEFECT REPRODUCED: transient failure -> told 200, balance undefined (event lost)
+DEFECT REPRODUCED: null body -> throws TypeError: Cannot read properties of null (reading 'data')
+DEFECT REPRODUCED: event without id -> status 200
+DEFECT REPRODUCED: string amount -> status 200, balance "0100"
+12 of 12 contracts fail on the broken handler as intended

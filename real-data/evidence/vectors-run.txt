@@ -1,0 +1,124 @@
+PROTOCOL.md sha256 e5c8f831dc19c43df6139d1d26ef3b383354f8aad293efe946cc8c3cbbf05cba
+run at 2026-11-03T07:36:57.736Z  node v26.0.0
+
+== V1 GitHub documented vector ==
+PASS  V1a HMAC-SHA256 equals documented value        expected=true   got=true   
+PASS  V1b lab verify() on GitHub header format       expected=false  got=false  (lab speaks Stripe-style only: coverage gap)
+
+== V2 Stripe scheme (stripe-node constants) ==
+PASS  V2-ref Python HMAC equals Node HMAC            expected=true   got=true   
+PASS  S-valid t=NOW                                  expected=true   got=true   
+PASS  S-age299                                       expected=true   got=true   
+PASS  S-age300 (boundary)                            expected=true   got=true   
+PASS  S-age301                                       expected=false  got=false  
+PASS  S-future301                                    expected=false  got=false  (stripe-node would accept; lab stricter)
+PASS  S-tamper (1 byte)                              expected=false  got=false  
+PASS  S-wrongsecret                                  expected=false  got=false  
+PASS  S-v0only                                       expected=false  got=false  
+PASS  S-rotation (two v1, second right)              expected=true   got=true   
+PASS  S-docs-header (no key for it, must not throw)  expected=false  got=false  
+PASS  S-nohex (64 non-hex chars)                     expected=false  got=false  
+
+== V3 12 real octokit payloads, verify() only ==
+PASS  check_run_completed: bytes match recorded sha256 expected=true   got=true   14159B
+PASS  check_run_completed: valid                     expected=true   got=true   
+PASS  check_run_completed: tampered                  expected=false  got=false  
+PASS  check_run_completed: wrong secret              expected=false  got=false  
+PASS  check_run_completed: stale NOW-3600            expected=false  got=false  
+PASS  check_run_completed: future NOW+3600           expected=false  got=false  
+PASS  check_run_completed: trailing space after signing expected=false  got=false  
+PASS  issue_comment_created: bytes match recorded sha256 expected=true   got=true   15500B
+PASS  issue_comment_created: valid                   expected=true   got=true   
+PASS  issue_comment_created: tampered                expected=false  got=false  
+PASS  issue_comment_created: wrong secret            expected=false  got=false  
+PASS  issue_comment_created: stale NOW-3600          expected=false  got=false  
+PASS  issue_comment_created: future NOW+3600         expected=false  got=false  
+PASS  issue_comment_created: trailing space after signing expected=false  got=false  
+PASS  issues_opened: bytes match recorded sha256     expected=true   got=true   13521B
+PASS  issues_opened: valid                           expected=true   got=true   
+PASS  issues_opened: tampered                        expected=false  got=false  
+PASS  issues_opened: wrong secret                    expected=false  got=false  
+PASS  issues_opened: stale NOW-3600                  expected=false  got=false  
+PASS  issues_opened: future NOW+3600                 expected=false  got=false  
+PASS  issues_opened: trailing space after signing    expected=false  got=false  
+PASS  ping_payload: bytes match recorded sha256      expected=true   got=true   7633B
+PASS  ping_payload: valid                            expected=true   got=true   
+PASS  ping_payload: tampered                         expected=false  got=false  
+PASS  ping_payload: wrong secret                     expected=false  got=false  
+PASS  ping_payload: stale NOW-3600                   expected=false  got=false  
+PASS  ping_payload: future NOW+3600                  expected=false  got=false  
+PASS  ping_payload: trailing space after signing     expected=false  got=false  
+PASS  pull_request_closed: bytes match recorded sha256 expected=true   got=true   28073B
+PASS  pull_request_closed: valid                     expected=true   got=true   
+PASS  pull_request_closed: tampered                  expected=false  got=false  
+PASS  pull_request_closed: wrong secret              expected=false  got=false  
+PASS  pull_request_closed: stale NOW-3600            expected=false  got=false  
+PASS  pull_request_closed: future NOW+3600           expected=false  got=false  
+PASS  pull_request_closed: trailing space after signing expected=false  got=false  
+PASS  pull_request_opened: bytes match recorded sha256 expected=true   got=true   28011B
+PASS  pull_request_opened: valid                     expected=true   got=true   
+PASS  pull_request_opened: tampered                  expected=false  got=false  
+PASS  pull_request_opened: wrong secret              expected=false  got=false  
+PASS  pull_request_opened: stale NOW-3600            expected=false  got=false  
+PASS  pull_request_opened: future NOW+3600           expected=false  got=false  
+PASS  pull_request_opened: trailing space after signing expected=false  got=false  
+PASS  pull_request_reopened: bytes match recorded sha256 expected=true   got=true   28013B
+PASS  pull_request_reopened: valid                   expected=true   got=true   
+PASS  pull_request_reopened: tampered                expected=false  got=false  
+PASS  pull_request_reopened: wrong secret            expected=false  got=false  
+PASS  pull_request_reopened: stale NOW-3600          expected=false  got=false  
+PASS  pull_request_reopened: future NOW+3600         expected=false  got=false  
+PASS  pull_request_reopened: trailing space after signing expected=false  got=false  
+PASS  pull_request_synchronize: bytes match recorded sha256 expected=true   got=true   28127B
+PASS  pull_request_synchronize: valid                expected=true   got=true   
+PASS  pull_request_synchronize: tampered             expected=false  got=false  
+PASS  pull_request_synchronize: wrong secret         expected=false  got=false  
+PASS  pull_request_synchronize: stale NOW-3600       expected=false  got=false  
+PASS  pull_request_synchronize: future NOW+3600      expected=false  got=false  
+PASS  pull_request_synchronize: trailing space after signing expected=false  got=false  
+PASS  push_1: bytes match recorded sha256            expected=true   got=true   8066B
+PASS  push_1: valid                                  expected=true   got=true   
+PASS  push_1: tampered                               expected=false  got=false  
+PASS  push_1: wrong secret                           expected=false  got=false  
+PASS  push_1: stale NOW-3600                         expected=false  got=false  
+PASS  push_1: future NOW+3600                        expected=false  got=false  
+PASS  push_1: trailing space after signing           expected=false  got=false  
+PASS  release_published: bytes match recorded sha256 expected=true   got=true   8751B
+PASS  release_published: valid                       expected=true   got=true   
+PASS  release_published: tampered                    expected=false  got=false  
+PASS  release_published: wrong secret                expected=false  got=false  
+PASS  release_published: stale NOW-3600              expected=false  got=false  
+PASS  release_published: future NOW+3600             expected=false  got=false  
+PASS  release_published: trailing space after signing expected=false  got=false  
+PASS  star_created: bytes match recorded sha256      expected=true   got=true   6817B
+PASS  star_created: valid                            expected=true   got=true   
+PASS  star_created: tampered                         expected=false  got=false  
+PASS  star_created: wrong secret                     expected=false  got=false  
+PASS  star_created: stale NOW-3600                   expected=false  got=false  
+PASS  star_created: future NOW+3600                  expected=false  got=false  
+PASS  star_created: trailing space after signing     expected=false  got=false  
+PASS  workflow_run_completed: bytes match recorded sha256 expected=true   got=true   21908B
+PASS  workflow_run_completed: valid                  expected=true   got=true   
+PASS  workflow_run_completed: tampered               expected=false  got=false  
+PASS  workflow_run_completed: wrong secret           expected=false  got=false  
+PASS  workflow_run_completed: stale NOW-3600         expected=false  got=false  
+PASS  workflow_run_completed: future NOW+3600        expected=false  got=false  
+PASS  workflow_run_completed: trailing space after signing expected=false  got=false  
+
+== V4 end to end, broken vs fixed ==
+PASS  V4 broken: valid accepted (of 12)              expected=12     got=12     
+FAIL  V4 broken: tampered accepted (of 12)           expected=0      got=12     (broken has no signature check)
+FAIL  V4 broken: wrongsecret accepted (of 12)        expected=0      got=12     (broken has no signature check)
+FAIL  V4 broken: stale accepted (of 12)              expected=0      got=12     (broken has no signature check)
+FAIL  V4 broken: forgedzero accepted (of 12)         expected=0      got=12     (broken has no signature check)
+PASS  V4 fixed: valid accepted (of 12)               expected=12     got=12     
+PASS  V4 fixed: tampered accepted (of 12)            expected=0      got=0      
+PASS  V4 fixed: wrongsecret accepted (of 12)         expected=0      got=0      
+PASS  V4 fixed: stale accepted (of 12)               expected=0      got=0      
+PASS  V4 fixed: forgedzero accepted (of 12)          expected=0      got=0      
+
+== V5 constant-time compare (source read, not timing) ==
+PASS  fixed.js imports and calls timingSafeEqual     expected=true   got=true   
+PASS  fixed.js has no === on signature strings       expected=true   got=true   
+
+rows 110, rows where got != expected: 4

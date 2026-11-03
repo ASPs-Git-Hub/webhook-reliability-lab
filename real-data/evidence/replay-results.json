@@ -1,0 +1,317 @@
+{
+ "stats": {
+  "events": 1941,
+  "counterEvents": 1819,
+  "stateEvents": 122,
+  "prsWithState": 76,
+  "prsWith2plusState": 36,
+  "prsAmbiguous": 0,
+  "prsScorable": 36
+ },
+ "results": {
+  "S0 clean": {
+   "broken": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   }
+  },
+  "S1 duplicates": {
+   "broken": {
+    "dup_extra": 686,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 2,
+    "http200": 2676,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 2676
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 2676,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 2676
+   }
+  },
+  "S2 reorder": {
+   "broken": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 1,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   }
+  },
+  "S3 reverse": {
+   "broken": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "5/76",
+    "wrong_final_multi": "5/36",
+    "stale_overwrites": 19,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   }
+  },
+  "S4 long delay": {
+   "broken": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   }
+  },
+  "S5 burst+dups": {
+   "broken": {
+    "dup_extra": 617,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 2,
+    "http200": 2597,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 2597,
+    "same_event_copies_in_same_burst": 98
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 2597,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 2597,
+    "same_event_copies_in_same_burst": 98
+   }
+  },
+  "S6 transient fail": {
+   "broken": {
+    "dup_extra": 0,
+    "dropped": 83,
+    "silent_lost": 83,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "1/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   }
+  },
+  "S6p permanent fail": {
+   "broken": {
+    "dup_extra": 0,
+    "dropped": 31,
+    "silent_lost": 31,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "1/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 31,
+    "silent_lost": 0,
+    "dead_lettered": 32,
+    "wrong_final_all": "1/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1909,
+    "http400": 0,
+    "http500": 32,
+    "replays_accepted": "-",
+    "deliveries": 1941
+   }
+  },
+  "S7 everything": {
+   "broken": {
+    "dup_extra": 600,
+    "dropped": 66,
+    "silent_lost": 66,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "2/76",
+    "wrong_final_multi": "1/36",
+    "stale_overwrites": 1,
+    "http200": 2612,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 2612,
+    "same_event_copies_in_same_burst": 98
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 2612,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "-",
+    "deliveries": 2612,
+    "same_event_copies_in_same_burst": 98
+   }
+  },
+  "S8 stale replay": {
+   "broken": {
+    "dup_extra": 207,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": "n/a",
+    "wrong_final_all": "2/76",
+    "wrong_final_multi": "2/36",
+    "stale_overwrites": 2,
+    "http200": 2156,
+    "http400": 0,
+    "http500": 0,
+    "replays_accepted": "215/215",
+    "deliveries": 2156
+   },
+   "fixed": {
+    "dup_extra": 0,
+    "dropped": 0,
+    "silent_lost": 0,
+    "dead_lettered": 0,
+    "wrong_final_all": "0/76",
+    "wrong_final_multi": "0/36",
+    "stale_overwrites": 0,
+    "http200": 1941,
+    "http400": 215,
+    "http500": 0,
+    "replays_accepted": "0/215",
+    "deliveries": 2156
+   }
+  }
+ }
+}

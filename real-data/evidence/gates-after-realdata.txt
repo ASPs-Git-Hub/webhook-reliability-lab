@@ -1,0 +1,23 @@
+✔ fixed: maxAttempts is validated (0.112958ms)
+✔ fixed: backoff hook is called between attempts with increasing attempt numbers (0.081709ms)
+✔ fixed: security log hook records rejected and dead-lettered deliveries (0.103958ms)
+✔ fixed: full-jitter backoff stays within the cap and grows its ceiling (0.053916ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 72.699625
+---
+DEFECT REPRODUCED: null body -> throws TypeError: Cannot read properties of null (reading 'data')
+DEFECT REPRODUCED: event without id -> status 200
+DEFECT REPRODUCED: string amount -> status 200, balance "0100"
+12 of 12 contracts fail on the broken handler as intended
+---
+M22 KILLED   security log for bad signatures removed
+M23 KILLED   dead-letter log removed
+M24 KILLED   backoff hook never called
+restored baseline passes: True
+24 of 24 mutations killed

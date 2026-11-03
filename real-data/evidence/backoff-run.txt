@@ -1,0 +1,6 @@
+PROTOCOL.md sha256 e5c8f831dc19c43df6139d1d26ef3b383354f8aad293efe946cc8c3cbbf05cba
+run at 2026-11-03T07:38:20.494Z  node v26.0.0
+busiest real second: unix 1793689663 with N=8 events
+a default (zero)               events=8 sleeps_per_event=4 (expected 4) all_in_range=true distinct_round1=1 peak_same_50ms_bucket=8 dead_lettered=8
+b exponential, no jitter       events=8 sleeps_per_event=4 (expected 4) all_in_range=true distinct_round1=1 peak_same_50ms_bucket=8 dead_lettered=8
+c expBackoffJitter (seeded)    events=8 sleeps_per_event=4 (expected 4) all_in_range=true distinct_round1=8 peak_same_50ms_bucket=3 dead_lettered=8

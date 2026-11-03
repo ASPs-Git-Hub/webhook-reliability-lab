@@ -1,0 +1,9 @@
+{
+  "source": "https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries",
+  "source_file": "github/docs content/webhooks/using-webhooks/validating-webhook-deliveries.md (CC-BY-4.0 content, MIT code)",
+  "fetched": "2026-11-03",
+  "secret": "It's a Secret to Everybody",
+  "payload": "Hello, World!",
+  "signature_hex": "757107ea0eb2509fc211221cce984b8a37570b6d7586c22c46f4379c8b043e17",
+  "x_hub_signature_256": "sha256=757107ea0eb2509fc211221cce984b8a37570b6d7586c22c46f4379c8b043e17"
+}

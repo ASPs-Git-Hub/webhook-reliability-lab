@@ -1,0 +1,47 @@
+
+> test
+> node --test test/*.test.js
+
+✔ broken: rejects forged signature (fresh timestamp, well-formed but wrong MAC) (1.198625ms)
+✔ broken: rejects a signature made with the wrong secret (0.262917ms)
+✔ broken: rejects a tampered body (0.082167ms)
+✔ broken: rejects replay outside tolerance window (0.077709ms)
+✔ broken: duplicate delivery credits once (0.085958ms)
+✔ broken: concurrent duplicates credit once (0.088542ms)
+✔ broken: out-of-order event does not overwrite newer state (0.215458ms)
+✔ broken: same-second events end in the same state whatever the arrival order (0.118916ms)
+✔ broken: transient failure is retried, not lost (0.087166ms)
+✔ broken: a null body is rejected with 400, not a crash (0.16075ms)
+✔ broken: an event without an id is rejected, not merged with other id-less events (0.086542ms)
+✔ broken: a string amount is rejected, never concatenated (0.057291ms)
+✔ fixed: rejects forged signature (fresh timestamp, well-formed but wrong MAC) (0.1765ms)
+✔ fixed: rejects a signature made with the wrong secret (0.06325ms)
+✔ fixed: rejects a tampered body (0.0305ms)
+✔ fixed: rejects replay outside tolerance window (0.022667ms)
+✔ fixed: duplicate delivery credits once (0.102958ms)
+✔ fixed: concurrent duplicates credit once (0.048333ms)
+✔ fixed: out-of-order event does not overwrite newer state (0.070583ms)
+✔ fixed: same-second events end in the same state whatever the arrival order (0.082291ms)
+✔ fixed: transient failure is retried, not lost (0.055875ms)
+✔ fixed: a null body is rejected with 400, not a crash (0.028416ms)
+✔ fixed: an event without an id is rejected, not merged with other id-less events (0.02325ms)
+✔ fixed: a string amount is rejected, never concatenated (0.025416ms)
+✔ fixed: valid event is accepted (guards are not just rejecting everything) (0.053166ms)
+✔ fixed: persistent failure goes to the failure list once and returns 500 (0.729333ms)
+✔ fixed: concurrent duplicates of a permanently failing event are all told 500 (0.55975ms)
+✔ fixed: signature header edge cases (0.07725ms)
+✔ fixed: secret rotation accepts any listed v1 and any listed secret (0.06275ms)
+✔ fixed: tolerance boundary is exactly 300 seconds in both directions (0.075458ms)
+✔ fixed: a broken clock fails closed (0.033708ms)
+✔ fixed: maxAttempts is validated (0.097875ms)
+✔ fixed: backoff hook is called between attempts with increasing attempt numbers (0.070834ms)
+✔ fixed: security log hook records rejected and dead-lettered deliveries (0.09975ms)
+✔ fixed: full-jitter backoff stays within the cap and grows its ceiling (0.052417ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 71.116292
